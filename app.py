@@ -21,7 +21,7 @@ class MessageRequest(BaseModel):
 # Initialize Gradio client
 client = Client("hysts/mistral-7b") # Replace with your Gradio space if needed
 
-@app.post("/ask")
+@app.post("/")
 async def ask_gradio(request: MessageRequest):
     try:
         result = client.predict(
